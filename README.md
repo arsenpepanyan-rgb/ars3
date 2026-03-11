@@ -1,37 +1,25 @@
 # ars3
-            Employee employee = new Employee("Arsen", "menejer", 100);
-            employee.ChangeSalary(-50);
-            employee.ShowInfo();
-        }
-    }
-    class Employee
-    {
-        public string Name;
-        public string JobTitle;
-        public int Salary;
+        int number;
+        int even;
+        int odd;
+        Console.Write("Viberite chislo Ot 0 do 100: ");
+        number = Convert.ToInt32(Console.ReadLine());
 
-        public Employee(string name, string jobTitle, int salary)
+        if(number > 100 || number < 0)
         {
-            Name = name;
-            JobTitle = jobTitle;
-            Salary = salary;
+            Console.WriteLine("Takova chisla netu");
+            return;
         }
-        public void ChangeSalary(int changeSalary)
+        if (number % 2 == 0)
         {
-            Salary = changeSalary;
-
-            if(changeSalary < 0)
-            {
-                Console.WriteLine("Not valid salary");
-                return;
-            }
+            even = number;
+            Console.WriteLine("Eto chyotnoe chislo " + even);
         }
-
-        public void ShowInfo()
+        else
         {
-            Console.WriteLine($"Employee name: {Name}\nEmployee job title: {JobTitle}\nEmployee salary: {Salary}");
+            odd = number;
+            Console.WriteLine("Eto NE chyotnoye chislo " + odd);
         }
-
 
     }
 
