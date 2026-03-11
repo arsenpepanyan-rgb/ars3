@@ -22,7 +22,8 @@
 
             if(changeSalary < 0)
             {
-                Console.WriteLine("Not valid salary");                
+                Console.WriteLine("Not valid salary");
+                return;
             }
         }
 
